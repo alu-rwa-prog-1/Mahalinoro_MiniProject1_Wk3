@@ -21,7 +21,73 @@ class MyApp extends StatelessWidget {
           ],
         ),
 
-        drawer: Drawer(),
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.grey[900],
+                ),
+                padding: EdgeInsets.all(20),
+
+                child: Stack(
+                  children: <Widget>[
+                    Align(
+                    alignment: Alignment.topLeft,
+                    child: CircleAvatar(
+                      backgroundImage: NetworkImage('https://cdn.iconscout.com/icon/free/png-256/avatar-373-456325.png'),
+                      radius: 40.0,
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.centerLeft+ Alignment(0, .7),
+                    child: Text(
+                      'Jane Doe',
+                      style: TextStyle(color: Colors.white, fontSize: 15.0),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.bottomLeft + Alignment(0, .1),
+                    child: Text(
+                      'a.doe@mail.com',
+                      style: TextStyle(
+                        color: Colors.white70,
+                      ),
+                    ),
+                  ),
+                  ],
+                ),
+              ),
+
+              ListTile(
+                leading: Icon(Icons.person),
+                title: Text('Profile'),                
+              ),
+
+              ListTile(
+                leading: Icon(Icons.notifications),
+                title: Text('Notifications'),                
+              ),
+
+              ListTile(
+                leading: Icon(Icons.shopping_cart, color: Colors.lightBlue[300]),
+                title: Text('My Cart', style: TextStyle(color: Colors.lightBlue[300])),                
+                tileColor: Color.fromRGBO(79, 195, 247, 0.08),
+              ),
+
+              ListTile(
+                leading: Icon(Icons.settings),
+                title: Text('Settings'),                
+              ),
+
+              ListTile(
+                leading: Icon(Icons.logout),
+                title: Text('Logout'),                
+              ),
+            ],
+          )
+        ),
 
         body: Container(
           margin: EdgeInsets.only(right: 10, left: 10, top: 4, bottom: 10),
@@ -533,6 +599,7 @@ class MyApp extends StatelessWidget {
                         Divider(),
                       ],
                     )),
+
               ],
             ),
           ),
