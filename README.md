@@ -2,6 +2,6 @@
 
 E-Shop is an online shopping app allowing users to buy clothes. 
 
-### UI Design
-![E-Shop UI](/ui.png)
+### UI
+<img src="/ui.png" width="450" height="800">
 
